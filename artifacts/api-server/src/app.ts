@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
 
 // --- Статика фронтенда (React/Vite) ---
-const frontendPath = path.resolve(__dirname, "../../mamasoliyev137/dist/public");
+const frontendPath = path.resolve(__dirname, "../../izzatillo-site/dist/public");
 app.use(express.static(frontendPath));
 
 // --- SPA fallback для React ---
