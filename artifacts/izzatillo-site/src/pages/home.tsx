@@ -180,7 +180,10 @@ export default function Home() {
               <div className="absolute inset-4 rounded-full border border-white/20 p-2 glass-card">
                 <div className="w-full h-full rounded-full bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-                  <span className="text-8xl font-display font-bold text-white/20 tracking-tighter">IM</span>
+                  <img 
+  src="/images/logo-circle.png" 
+  className="w-full h-full object-cover rounded-full"
+/>
                   
                   {/* Floating badges */}
                   <motion.div 
