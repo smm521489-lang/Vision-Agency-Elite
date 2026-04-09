@@ -523,15 +523,23 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <motion.div 
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex-1 relative aspect-square lg:aspect-[4/5] w-full max-w-md mx-auto rounded-[2rem] overflow-hidden glass-card border-white/10"
-            >
-              <div className="absolute inset-0 bg-gradient-to-tr from-neutral-800 to-neutral-900 flex items-center justify-center">
-                <span className="text-6xl font-display font-bold text-white/10">Izzatillo Maripov</span>
-              </div>
-            </motion.div>
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="flex-1 relative aspect-square lg:aspect-[4/5] w-full max-w-md mx-auto rounded-[2rem] overflow-hidden glass-card border-white/10"
+>
+  {/* ДО: заглушка */}
+  {/* <div className="absolute inset-0 bg-gradient-to-tr from-neutral-800 to-neutral-900 flex items-center justify-center">
+    <span className="text-6xl font-display font-bold text-white/10">Izzatillo Maripov</span>
+  </div> */}
+
+  {/* ПОСЛЕ: реальное фото */}
+  <img 
+    src="/images/izzatillo-photo.jpg" 
+    alt="Izzatillo Maripov" 
+    className="w-full h-full object-cover rounded-[2rem]"
+  />
+</motion.div>
 
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
