@@ -396,7 +396,8 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[1, 2, 3, 4].map((i) => (
-              <motion.div
+              
+  <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -409,10 +410,14 @@ export default function Home() {
                 {/* Placeholder pattern */}
                 <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform group-hover:bg-primary text-white group-hover:text-black">
-                    <Play className="w-6 h-6 ml-1 fill-current" />
-                  </div>
-                </div>
+  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform group-hover:bg-primary">
+    <img 
+      src="/logo-circle.png" 
+      alt="Logo" 
+      className="w-12 h-12 object-contain"
+    />
+  </div>
+</div>
                 
                 <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center">
