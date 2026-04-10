@@ -415,7 +415,7 @@ export default function Home() {
 ].map((item, i) => (
   <motion.div
   key={i}
-  <div onClick={() => window.open(item.link, "_blank")}></div>
+  onClick={() => window.open(item.link, "_blank")}
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
