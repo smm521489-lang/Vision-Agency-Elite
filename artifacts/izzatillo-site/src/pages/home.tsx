@@ -496,48 +496,68 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 relative overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-primary/5 rounded-[100%] blur-[100px] pointer-events-none" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-display font-bold mb-16 text-center"
-          >
-            Mijozlar nima <span className="text-primary">deydi?</span>
-          </motion.h2>
+<section className="py-32 relative overflow-hidden">
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-primary/5 rounded-[100%] blur-[100px] pointer-events-none" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="glass-card rounded-3xl p-8 relative"
-              >
-                <div className="text-primary text-6xl font-serif absolute top-4 right-6 opacity-20">"</div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center font-bold">
-                    M{i}
-                  </div>
-                  <div>
-                    <div className="font-bold">Mijoz Ismi {i}</div>
-                    <div className="text-sm text-white/50">Biznes Egasi</div>
-                  </div>
-                </div>
-                <p className="text-white/80 leading-relaxed">
-                  "Izzatillo bilan ishlashni boshlaganimizdan so'ng, Instagram sahifamiz mutlaqo yangi bosqichga chiqdi. Mijozlar oqimi sezilarli darajada oshdi. O'z ishining ustasi!"
-                </p>
-              </motion.div>
-            ))}
+  <div className="container mx-auto px-6 relative z-10">
+    <motion.h2 
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-4xl md:text-6xl font-display font-bold mb-16 text-center"
+    >
+      Mijozlar nima <span className="text-primary">deydi?</span>
+    </motion.h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          name: "Azizbek Tursunov",
+          role: "Biznes Egasi",
+          text: "Izzatillo bilan ishlaganimdan so'ng Instagramimiz ancha tez o‘sishni boshladi. Mijozlar oqimi sezilarli oshdi."
+        },
+        {
+          name: "Madina Karimova",
+          role: "Online Do‘kon Egasi",
+          text: "Reels strategiya juda kuchli chiqdi. Avval sotuv yo‘q edi, hozir har kuni buyurtma bor."
+        },
+        {
+          name: "Javohir Ismoilov",
+          role: "Startup Founder",
+          text: "Kontentlar juda professional. Brendimizga ishonch oshdi va auditoriya tez o‘sdi."
+        }
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.15 }}
+          className="glass-card rounded-3xl p-8 relative"
+        >
+          <div className="text-primary text-6xl font-serif absolute top-4 right-6 opacity-20">
+            "
           </div>
-        </div>
-      </section>
 
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center font-bold text-white">
+              {item.name[0]}
+            </div>
+
+            <div>
+              <div className="font-bold">{item.name}</div>
+              <div className="text-sm text-white/50">{item.role}</div>
+            </div>
+          </div>
+
+          <p className="text-white/80 leading-relaxed">
+            {item.text}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* About / Personal Brand */}
       <section className="py-32 relative bg-neutral-950" id="haqimda">
         <div className="container mx-auto px-6">
