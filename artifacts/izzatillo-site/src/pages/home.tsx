@@ -415,13 +415,14 @@ export default function Home() {
 ].map((item, i) => (
   <motion.div
   key={i}
+  <div onClick={() => window.open(item.link, "_blank")}></div>
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   transition={{ delay: i * 0.1 }}
   className="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer"
 >
-  <div onClick={() => window.open(item.link, "_blank")}>
+  
   <video
     src={item.video}
     className="w-full h-full object-cover"
@@ -430,7 +431,7 @@ export default function Home() {
     loop
     playsInline
   />
-</div>
+
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10" />
 
   <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3">
