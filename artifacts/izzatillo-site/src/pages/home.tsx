@@ -396,11 +396,23 @@ export default function Home() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {[
-  "/videos/reel1.mp4",
-  "/videos/reel2.mp4",
-  "/videos/reel3.mp4",
-  "/videos/reel4.mp4"
-].map((video, i) => (
+  {
+    video: "/videos/reel1.mp4",
+    link: "https://www.instagram.com/reel/DV5zQLKCF45/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    video: "/videos/reel2.mp4",
+    link: "https://www.instagram.com/reel/DS7bcariBnH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    video: "/videos/reel3.mp4",
+    link: "https://www.instagram.com/reel/DRmXaaLjaf9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    video: "/videos/reel4.mp4",
+    link: "https://www.instagram.com/reel/DREt91tDdVa/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  }
+].map((item, i) => (
   <motion.div
   key={i}
   initial={{ opacity: 0, y: 50 }}
@@ -409,15 +421,16 @@ export default function Home() {
   transition={{ delay: i * 0.1 }}
   className="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer"
 >
+  <div onClick={() => window.open(item.link, "_blank")}>
   <video
-    src={video}
+    src={item.video}
     className="w-full h-full object-cover"
     autoPlay
     muted
     loop
     playsInline
   />
-
+</div>
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10" />
 
   <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3">
