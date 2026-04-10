@@ -395,33 +395,39 @@ export default function Home() {
           </motion.div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {[1, 2, 3, 4].map((i) => (
-              
+            {[
+  "/videos/reel1.mp4",
+  "/videos/reel2.mp4",
+  "/videos/reel3.mp4",
+  "/videos/reel4.mp4"
+].map((video, i) => (
   <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer"
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10" />
-                
-                {/* Placeholder pattern */}
-                <div className="absolute inset-0 opacity-20 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform group-hover:bg-primary text-white group-hover:text-black">
-                    <Play className="w-6 h-6 ml-1 fill-current" />
-                  </div>
-                </div>
-                
-                <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center">
-                    <Eye className="w-4 h-4 text-primary" />
-                  </div>
-                  <div className="text-sm font-medium">100K+ ko'rishlar</div>
-                </div>
-              </motion.div>
+  key={i}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: i * 0.1 }}
+  className="group relative aspect-[9/16] rounded-3xl overflow-hidden bg-neutral-900 border border-white/10 cursor-pointer"
+>
+  <video
+    src={video}
+    className="w-full h-full object-cover"
+    autoPlay
+    muted
+    loop
+    playsInline
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10" />
+
+  <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3">
+    <div className="w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/50 flex items-center justify-center">
+      <Eye className="w-4 h-4 text-primary" />
+    </div>
+    <div className="text-sm font-medium">100K+ ko'rishlar</div>
+  </div>
+</motion.div>
+  
             ))}
           </div>
         </div>
