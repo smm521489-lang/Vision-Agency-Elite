@@ -162,7 +162,7 @@ export default function Home() {
               
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                 <Button onClick={() => window.open("https://t.me/kontentmarketolog1", "_blank")} size="lg" className="bg-primary text-black hover:bg-primary/90 font-bold rounded-full px-8 py-6 text-lg w-full sm:w-auto shadow-[0_0_40px_rgba(0,255,255,0.3)] transition-shadow hover:shadow-[0_0_60px_rgba(0,255,255,0.5)]">
-                  Bepul konsultatsiya olish
+                  Konsultatsiyaga yozilish
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => scrollTo("natijalar")} className="rounded-full px-8 py-6 text-lg w-full sm:w-auto border-white/10 hover:bg-white/5 text-white">
                   Natijalarni ko'rish
@@ -630,7 +630,7 @@ export default function Home() {
               Biznesingizni keyingi bosqichga <br className="hidden md:block"/> olib chiqmoqchimisiz?
             </h2>
             <p className="text-xl text-white/70 mb-10 relative z-10">
-              Hoziroq bog'laning va bepul konsultatsiya orqali sahifangizni <br className="hidden md:block"/> qanday o'stirish mumkinligini bilib oling.
+              Hoziroq bog'laning va konsultatsiyaga yozilib sahifangizni <br className="hidden md:block"/> qanday o'stirish mumkinligini bilib oling.
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 relative z-10">
